@@ -13,7 +13,7 @@ const table = document.querySelector('table')
 fetch(`https://northwind.vercel.app/api/products/${id}`).then(response => response.json()).then(data => {
     table.innerHTML += `
     <tr>
-          <td><input type="text" class="upId" value="${data.id}" readonly></td>
+          <td>${data.id}</td>
           <td><input type="text" class="upName" value="${data.name}"></td>
           <td><input type="text" class="upPrice" value="${data.unitPrice}"></td>
           <td><input type="text" class="upStock" value="${data.unitsInStock}"></td>
